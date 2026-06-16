@@ -38,8 +38,11 @@ typedef struct {
 } ID_Table;
 
 void initializeTableID(ID_Table* ID_table);
+
 ID_Table_Record* IDFromServerToClient(ID_Table* ID_table, unsigned short ID);
+
 unsigned short IDFromClientToServer(ID_Table* ID_table, char* buf, int length, unsigned short ID, struct sockaddr_in client_addr, int my_socket);
+
 void findOutOfTime(ID_Table* ID_table, int my_socket);
 
 #endif

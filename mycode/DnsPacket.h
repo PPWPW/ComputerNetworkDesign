@@ -23,12 +23,17 @@
 
 
 void parseDomainFromDnsPacket(char *dnsPacket, char *urlInDns);
-void extractIpsFromDnsPacket(char *dnsPacket, int packetLength, char* ipStrings[], int *ipCount) ;
-int CreateResponse(char *DnsInfo, int DnsLength, char **FindIps, int ipCount, char *DnsResponse);
+
+void extractIpsFromDnsPacket(char* dnsPacket, int packetLength, char* ipStrings[], int* ipCount);
+
+int CreateResponse(char* DnsInfo, int DnsLength, char** FindIps, int ipCount, char* DnsResponse);
 
 unsigned long ipToNetworkByteOrder(const char *ip);
-int isFirstQueryTypeA(const char *buf);
-int GetLengthOfDns(char *DnsInfo);
+
+int isFirstQueryTypeA(const char* buf);
+
+int GetLengthOfDns(char* DnsInfo);
+
 int CreateErrorResponse(char* DnsInfo, int DnsLength, char* DnsResponse);
 
 #endif
