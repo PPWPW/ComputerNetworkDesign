@@ -35,7 +35,7 @@ HashNode* createHashNode(char* ip, char* url) {
 }
 
 //初始化哈希表
-HashNode* initHashTable() {
+HashTable* initHashTable() {
     HashTable* hashTable = (HashTable*)malloc(sizeof(HashTable));
     if (hashTable) {
         // 将所有槽位置 NULL

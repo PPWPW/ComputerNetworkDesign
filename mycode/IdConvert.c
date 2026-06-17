@@ -119,7 +119,8 @@ unsigned short IDFromClientToServer
         i = (i + 1) % ID_SIZE;
 
     } while (tryCount > 0);
-    if (tryCount >= 0) {
+
+    if (tryCount > 0) {
         ID_table->index = (i + 1) % ID_SIZE;
     }
     else if (tryCount == 0) {

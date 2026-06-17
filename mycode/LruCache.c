@@ -24,7 +24,7 @@ CacheNode* createCacheNode(char* url, char** ips, int ipCount) {
 //初始化LRU缓存
 Cache* initCache() {
 
-    Cache* cache = (Cache*)malloc(sizeof(cache));
+    Cache* cache = (Cache*)malloc(sizeof(Cache));
     cache->capacity = CACHE_CAPACITY;
     cache->head = createCacheNode("", NULL, 0);
     cache->tail = createCacheNode("", NULL, 0);
